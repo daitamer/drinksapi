@@ -18,4 +18,10 @@ public class HomeController {
         return "Where is my coffee?????!!!!";
     }
 
+    @GetMapping("/health")
+    public String health(){
+        return "API is up and running yay!";
+    }
+
+
 }
