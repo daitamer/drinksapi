@@ -21,7 +21,7 @@ public class CoffeeControllerTests {
             mockMvc.perform(MockMvcRequestBuilders.get("/coffee"))
                     .andExpect(MockMvcResultMatchers.status().isOk())
                     .andExpect(MockMvcResultMatchers.jsonPath("$.name").value("latte"))
-                    .andExpect(MockMvcResultMatchers.jsonPath("$.id").value("123"));
+                    .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(1));
     }
 
     @Test
@@ -32,7 +32,7 @@ public class CoffeeControllerTests {
                 .param("name", coffeeName))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.name").value("cappuccino"))
-                .andExpect(MockMvcResultMatchers.jsonPath("$.id").value("123"));
+                .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(1));
     }
 
 }
