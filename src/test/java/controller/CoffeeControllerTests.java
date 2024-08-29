@@ -25,7 +25,7 @@ public class CoffeeControllerTests {
     }
 
     @Test
-    public void testCoffeeDefaultName2() throws Exception {
+    public void testAddCoffeeName() throws Exception {
         String coffeeName = "cappuccino";
 
         mockMvc.perform(MockMvcRequestBuilders.get("/coffee")
